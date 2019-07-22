@@ -39,26 +39,26 @@ Level :
 |:---:|
 | Fig 3. |
 
-### 2. Formatting Level data (Config) {: Developer}
+### 2. Format Level data (Config) {: Developer}
 
 1. check whether we need a `_prefix` for the inner shell configuration.
 > for example, in Fig 2., the ground level configuration is '2s2' instead of the full configuration '1s2.2s2', then we need to specify `_prefix="1s2."`
-2. modify the parameter in `./tools/prepare_level_from_nist.py` and then execute it. This will output a prototype config file called `./atom/config/C_III.Level` looks like Fig 3.
-3. modify `stage` column and add general information into `./atom/config/C_III.Level` (Fig 4.). Lines start with '#' is comment line.
+2. modify the parameter in `./tools/prepare_level_from_nist.py` and then execute it. This will output a prototype config file called `./atom/config/C_III.Level` looks like Fig 5.
+3. modify `stage` column and add general information into `./atom/config/C_III.Level` (Fig 6.). Lines start with '#' is comment line.
 
 | ![img](./fig/output_example1.png) |
 |:---:|
-| Fig 4. |
+| Fig 5. |
 
 | ![img](./fig/output_example2.png) |
 |:---:|
-| Fig 5. |
+| Fig 6. |
 
 
-### 3. Formatting Aji and Wavelength data (Database) {: Developer}
+### 3. Format Aji and Wavelength data (Database) {: Developer}
 
 
-### 4. Formatting Effective Collision Strength data for Collisional Excitation (database) {: Developer}
+### 4. Format Effective Collision Strength data for Collisional Excitation (database) {: Developer}
 
 
 ### 5. Construct `Atom()` instances (User interface) {: User}
