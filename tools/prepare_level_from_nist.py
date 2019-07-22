@@ -221,7 +221,7 @@ if __name__ == "__main__":
 
     # Nist Level txt is listed in a order of increasing level energy
 
-    path = "/Users/liu/kouui/workspace/AtomicQuery/atom/NIST_ASCII/C_III/C_III.NistLevel"
+    path = "../atom/NIST_ASCII/C_III/C_III.NistLevel"
     term_ulim = ("1s2.2s.3s","3S")
     result = read_level_information(_term_ulim=term_ulim, _path=path)
     print("restored ", result["nLevel"], " Levels.")

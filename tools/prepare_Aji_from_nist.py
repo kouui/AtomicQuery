@@ -159,8 +159,8 @@ def format_Aji_information(_result, _path, _prefix=""):
 
 if __name__ == "__main__":
 
-    path = "/Users/liu/kouui/workspace/AtomicQuery/atom/NIST_ASCII/C_III/C_III.NistLine"
+    path = "../atom/NIST_ASCII/C_III/C_III.NistLine"
     result = read_Aji_information(_path=path)
     print("restored ", result["nLine"], " Lines.")
-    path_out = "/Users/liu/kouui/workspace/AtomicQuery/atom/C_III/Einstein_A/Nist.Aji"
+    path_out = "../atom/C_III/Einstein_A/Nist.Aji"
     format_Aji_information(_result=result, _path=path_out, _prefix="")
