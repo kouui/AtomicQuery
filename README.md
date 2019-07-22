@@ -35,11 +35,24 @@ Level :
 |:---:|
 | Fig 2. |
 
+Einstein Aji :
+
+1. open https://physics.nist.gov/PhysRefData/ASD/lines_form.html
+2. modified the corresponding parameters in red rectangular shown in Fig 3.
+3. The query format looks like Fig 4.
+4. copy the whole text to `./atom/NIST_ASCII/C_III/C_III.NistLine`
+
 | ![img](./fig/nist_example3.png) |
 |:---:|
 | Fig 3. |
 
+| ![img](./fig/nist_example4.png) |
+|:---:|
+| Fig 4. |
+
 ### 2. Format Level data (Config) {: Developer}
+
+in this case, information such as Aji is taken from NIST.
 
 1. check whether we need a `_prefix` for the inner shell configuration.
 > for example, in Fig 2., the ground level configuration is '2s2' instead of the full configuration '1s2.2s2', then we need to specify `_prefix="1s2."`
@@ -57,8 +70,24 @@ Level :
 
 ### 3. Format Aji and Wavelength data (Database) {: Developer}
 
+in this case, information such as Aji is taken from NIST.
+
+1. check whether we need a `_prefix` for the inner shell configuration.
+> for example, in Fig 2., the ground level configuration is '2s2' instead of the full configuration '1s2.2s2', then we need to specify `_prefix="1s2."`
+2. modify the parameter in `./tools/prepare_Aji_from_nist.py` and then execute it. This will output a prototype config file called `./atom/C_III/Einstein_A/Nist.Aji` looks like Fig 7.
+3. add more general information into `./atom/config/C_III.Level` as comment line such as "reference" and so on.
+
+| ![img](./fig/output_example3.png) |
+|:---:|
+| Fig 7. |
+
 
 ### 4. Format Effective Collision Strength data for Collisional Excitation (database) {: Developer}
 
+like Aji, Effective Collision Strength table also follows (configuration, term, J) indexing (ctj indexing).
+
 
 ### 5. Construct `Atom()` instances (User interface) {: User}
+
+
+### 6. Generate Grotrian diagram {: User}

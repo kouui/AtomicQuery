@@ -24,7 +24,7 @@ def is_bad_line(_line):
         return True
 
     # check title line
-    if _line[0].isalpha():
+    if _line.split('|')[0].strip()[0].isalpha():
         return True
 
     # if not bad line return False
@@ -57,7 +57,7 @@ def store_level_info(_conf, _term, _J, _g, _E, _2s_plus_1, _L, _stage, _result):
 
     return None
 
-def read_level_infomation(_term_ulim, _path):
+def read_level_information(_term_ulim, _path):
     r"""
     Nist Level txt is listed in a order of increasing level energy.
     So we select Levels up to a specific term `_term_ulim`.
@@ -220,12 +220,10 @@ def format_level_information(_result, _path, _prefix=""):
 if __name__ == "__main__":
 
     # Nist Level txt is listed in a order of increasing level energy
-    # column order :
-    #       Level : Configuration   Term    J   g   Level(eV)
 
     path = "/Users/liu/kouui/workspace/AtomicQuery/atom/NIST_ASCII/C_III/C_III.NistLevel"
     term_ulim = ("1s2.2s.3s","3S")
-    result = read_level_infomation(_term_ulim=term_ulim, _path=path)
+    result = read_level_information(_term_ulim=term_ulim, _path=path)
     print("restored ", result["nLevel"], " Levels.")
     path_out = path.split("NIST_ASCII")[0] + "config/" + path.split('/')[-1].replace("Nist", "")
     format_level_information(_result=result, _path=path_out, _prefix="")
