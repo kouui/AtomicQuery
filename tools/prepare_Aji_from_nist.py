@@ -19,7 +19,7 @@ def is_bad_line(_line):
         return True
 
     # check title line
-    if _line.split('|')[0].strip()[0].isalpha():
+    if _ele[0][0].isalpha():
         return True
 
     # if not bad line return False
@@ -83,6 +83,7 @@ def read_Aji_information(_path):
         _conf_j, _term_j, _J_j = _words[8].strip(), _words[9].strip()[:2], _words[10].strip()
 
         # Aji and wavelength
+
         _Aji = float(_words[2].strip())
         _wl = float(_words[0].strip())
 
@@ -159,8 +160,19 @@ def format_Aji_information(_result, _path, _prefix=""):
 
 if __name__ == "__main__":
 
-    path = "../atom/NIST_ASCII/C_III/C_III.NistLine"
+    #-------------------------------------------------------------------------
+    # C III
+    #-------------------------------------------------------------------------
+    #path = "../atom/NIST_ASCII/C_III/C_III.NistLine"
+    #path_out = "../atom/C_III/Einstein_A/Nist.Aji"
+    #-------------------------------------------------------------------------
+
+    #-------------------------------------------------------------------------
+    # O V
+    #-------------------------------------------------------------------------
+    path = "../atom/NIST_ASCII/O_V/O_V.NistLine"
+    path_out = "../atom/O_V/Einstein_A/Nist.Aji"
+    #-------------------------------------------------------------------------
     result = read_Aji_information(_path=path)
     print("restored ", result["nLine"], " Lines.")
-    path_out = "../atom/C_III/Einstein_A/Nist.Aji"
     format_Aji_information(_result=result, _path=path_out, _prefix="")

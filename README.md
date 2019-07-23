@@ -11,7 +11,7 @@ This is an experimental package for the sake of hashing atomic data by (configur
 |:-----------------------:|:----------------|:-----|:-----|:----------------|:-------------------------|
 | C III | "1s2.2s2 1S" - "1s2.2p2 1S" | 10 | NIST | [Berrington et al. 1985](./ref/ECS/Berrington_et_al_1985.pdf) | not yet |
 | O V | "1s2.2s2 1S" - "1s2.2p2 1S" | 10 | NIST | [Berrington et al. 1985](./ref/ECS/Berrington_et_al_1985.pdf) | not yet |
-| Si III | "1s2.2s2.2p6.3s2 1S"- "1s2.2s2.2p6.3d.4d 1S" | 141 | [Kanti 2017](./ref/ECS/Kanti_2017.pdf) | [Kanti 2017](./ref/ECS/Kanti_2017.pdf) | not yet |
+| Si III (not yet) | "1s2.2s2.2p6.3s2 1S"- "1s2.2s2.2p6.3d.4d 1S" | 141 | [Kanti 2017](./ref/ECS/Kanti_2017.pdf) | [Kanti 2017](./ref/ECS/Kanti_2017.pdf) | not yet |
 
 
 ## Formatting files in database

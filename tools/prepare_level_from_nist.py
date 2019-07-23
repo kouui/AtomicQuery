@@ -24,7 +24,7 @@ def is_bad_line(_line):
         return True
 
     # check title line
-    if _line.split('|')[0].strip()[0].isalpha():
+    if _ele[0].isalpha():
         return True
 
     # if not bad line return False
@@ -221,8 +221,19 @@ if __name__ == "__main__":
 
     # Nist Level txt is listed in a order of increasing level energy
 
-    path = "../atom/NIST_ASCII/C_III/C_III.NistLevel"
+    #-------------------------------------------------------------------------
+    # C III
+    #-------------------------------------------------------------------------
+    #path = "../atom/NIST_ASCII/C_III/C_III.NistLevel"
+    #term_ulim = ("1s2.2s.3s","3S")
+    #-------------------------------------------------------------------------
+
+    #-------------------------------------------------------------------------
+    # O V
+    #-------------------------------------------------------------------------
+    path = "../atom/NIST_ASCII/O_V/O_V.NistLevel"
     term_ulim = ("1s2.2s.3s","3S")
+    #-------------------------------------------------------------------------
     result = read_level_information(_term_ulim=term_ulim, _path=path)
     print("restored ", result["nLevel"], " Levels.")
     path_out = path.split("NIST_ASCII")[0] + "config/" + path.split('/')[-1].replace("Nist", "")
