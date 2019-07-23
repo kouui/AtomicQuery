@@ -5,7 +5,9 @@
 #       CRC -> Collision Rate Coefficient
 # Effective Collision Strengths (Omega_ij[-]) : Berrington et al, 1985
 # Collision Rate : n_e * C_ij = n_e * ( 8.63e-6 * (Omega_ij*f1/f2) ) / (g_i * T_e^0.5) * e^(-dE_ji / (k*T_e))
+Type    ECS
 Temperature    1.26e+04    2.00e+04    3.16e+04    5.01e+04    7.94e+04    1.26e+05    2.00e+05    3.16e+05    5.01e+05
+END
 #--------------------------------------------------------------------------------------------------
 #   configuration_i    term_i      J_i     configuration_j    term_j      J_j     1.26e+04    2.00e+04    3.16e+04    5.01e+04    7.94e+04    1.26e+05    2.00e+05    3.16e+05    5.01e+05    f1    f2
     1s2.2s2            1S          0       1s2.2s.2p          3P          0       1.04e+00    1.03e+00    1.03e+00    9.96e-01    9.16e-01    8.08e-01    6.92e-01    5.79e-01    4.73e-01    1     9

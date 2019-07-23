@@ -94,5 +94,26 @@ However, like Aji, Effective Collision Strength table should also follow (config
 
 ### 5. Construct `Atom()` instances (User interface) {: User}
 
+An `AtomCls.Atom()`` instance can be constructed by
+```
+import sys
+sys.path.append("..")
+
+from src.Structure import AtomCls
+file = "../atom/config/C_III.Level"
+file_Aji = "../atom/C_III/Einstein_A/Nist.Aji"                                    # optional
+file_CEe = "../atom/C_III/Collisional_Excitation/Berrington_et_al_1985.Electron"  # optional
+atom = AtomCls.Atom(file, _file_Aji=file_Aji, _file_CEe=file_CEe)
+```
+
+furthermore, `Aji` and `CE` data could be read without resetting *.Level config file, like
+```
+atom.read_Aji(_file_Aji=file_Aji)
+atom.read_CE(_file_CEe=file_CEe)
+```
+
+the available properties of this Class contains
+> `atom.Title`, `atom.Z`, `atom.Element`, `atom.nLevel`, `atom.nLine`, `atom.Level`, `atom.Level_info`, `atom.Level_info_table`, `atom.Line_idx_table`, `atom.Line_ctj_table`, `atom.Line`, `atom.CE_Te_table`, `atom.CE_table`, `atom.CE_coe`, `atom.CE_type`
+
 
 ### 6. Generate Grotrian diagram {: User}

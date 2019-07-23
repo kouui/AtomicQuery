@@ -131,3 +131,56 @@ def read_line_info(_lns, _Aji, _line_ctj_table):
             _count += 1
 
     return None
+
+def read_CE_Temperature(_lns):
+    r"""
+    read Temperature grid for interpolation
+    """
+    for _i, _ln in enumerate(_lns[:]):
+
+        if skip_line(_ln):
+            continue
+        elif check_end(_ln):
+            break
+
+        _words = _ln.split()
+        _words = [_v.strip() for _v in _words]
+
+        if _words[0].lower() == "type":
+            _type = _words[1]
+
+        if _words[0].lower() == "temperature":
+            _Te = [float(v) for v in _words[1:]]
+
+    _nTe = len( _Te )
+    _re = _i + 1
+
+    return _re, _nTe, _Te, _type
+
+def read_CE_table(_rs, _lns, _CE_table, _f1, _f2, _line_ctj_table):
+    r"""
+    read CE table for interpolation
+    """
+    _count = 0
+    for _i, _ln in enumerate(_lns[_rs:]):
+
+        if skip_line(_ln):
+            continue
+        elif check_end(_ln):
+            break
+
+        _words = _ln.split()
+        _words = [_v.strip() for _v in _words]
+
+        # get ctj pair
+        _ctj_ij = ( (_words[0],_words[1],_words[2]), (_words[3],_words[4],_words[5]) )
+
+        if _ctj_ij in _line_ctj_table:
+            line_index = _line_ctj_table.index( _ctj_ij )
+            _CE_table[line_index,:] += [float(v) for v in _words[6:-2]]
+            _f1[line_index] = float(_words[-2])
+            _f2[line_index] = float(_words[-1])
+
+            _count += 1
+
+    return None
