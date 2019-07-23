@@ -117,3 +117,16 @@ the available properties of this Class contains
 
 
 ### 6. Generate Grotrian diagram {: User}
+
+
+## Notes
+
+for proton impact collision excitation
+
+- [chianti database](http://www.chiantidatabase.org/chianti_download.html) provides fitting parameters of proton excitation Rate Coefficient and electron excitation Effective Collisional Strength. **All of the proton transitions are forbidden transitions taking place between levels within the same configuration (fine structure)**.
+
+- [Copeland et al. 1997](./ref/ECS/Copeland_et_al_1997.pdf) listed a table of references for **Be-like to Cl-like ions for elements from C to Ni**. Also **fine_structure excitation only**.
+
+## TODO
+
+- [ ] Calculate the fitting parameters for collisional excitation/ionization. Because computation using fitting formula is always faster than interpolation, and it is also easier to optmize, e.x. `Numba` and so on.
