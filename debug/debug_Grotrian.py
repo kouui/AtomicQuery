@@ -10,7 +10,7 @@ if __name__ == "__main__":
     #-------------------------------------------------------------------------
     # C III Be like
     #-------------------------------------------------------------------------
-    file = "../atom/config/C_III.Level"
+    file = "../atom/C_III/C_III.Level"
     file_Aji = "../atom/C_III/Einstein_A/Nist.Aji"
     file_CEe = "../atom/C_III/Collisional_Excitation/Berrington_et_al_1985.Electron"
     atom = AtomCls.Atom(file, _file_Aji=file_Aji, _file_CEe=file_CEe)
@@ -34,25 +34,25 @@ if __name__ == "__main__":
     #-------------------------------------------------------------------------
     # O V Be like
     #-------------------------------------------------------------------------
-    file = "../atom/config/O_V.Level"
-    file_Aji = "../atom/O_V/Einstein_A/Nist.Aji"
-    file_CEe = "../atom/O_V/Collisional_Excitation/Berrington_et_al_1985.Electron"
-    atom = AtomCls.Atom(file, _file_Aji=file_Aji, _file_CEe=file_CEe)
-    gro = Grotrian.Grotrian(_atom=atom, _conf_prefix="1s2.")
-    gro.make_fig(_figsize=(10,6))
-
-    line_plot = (
-        (0, 4, "629.7", 0.3, 0.5),
-        (0, 2, "1218.3", 0.7, 0.1),
-        (4, 9, "774.5", 0.3, 0.5),
-        (4, 8, "1371.3", 0.8, 0.5),
-        (2, 5, "761.1", 0.1, 0.1),
-        (1, 6, "759.4", 0.25, 0.25),
-        (2, 6, "760.2", 0.40, 0.40),
-        (3, 6, "762.0", 0.55, 0.55),
-        (2, 7, "758.7", 0.70, 0.70),
-        (3, 7, "760.4", 0.85, 0.85),
-    )
+    ##file = "../atom/O_V/O_V.Level"
+    ##file_Aji = "../atom/O_V/Einstein_A/Nist.Aji"
+    ##file_CEe = "../atom/O_V/Collisional_Excitation/Berrington_et_al_1985.Electron"
+    ##atom = AtomCls.Atom(file, _file_Aji=file_Aji, _file_CEe=file_CEe)
+    ##gro = Grotrian.Grotrian(_atom=atom, _conf_prefix="1s2.")
+    ##gro.make_fig(_figsize=(10,6))
+    ##
+    ##line_plot = (
+    ##    (0, 4, "629.7", 0.3, 0.5),
+    ##    (0, 2, "1218.3", 0.7, 0.1),
+    ##    (4, 9, "774.5", 0.3, 0.5),
+    ##    (4, 8, "1371.3", 0.8, 0.5),
+    ##    (2, 5, "761.1", 0.1, 0.1),
+    ##    (1, 6, "759.4", 0.25, 0.25),
+    ##    (2, 6, "760.2", 0.40, 0.40),
+    ##    (3, 6, "762.0", 0.55, 0.55),
+    ##    (2, 7, "758.7", 0.70, 0.70),
+    ##    (3, 7, "760.4", 0.85, 0.85),
+    ##)
     #-------------------------------------------------------------------------
 
     #-------------------------------------------------------------------------
