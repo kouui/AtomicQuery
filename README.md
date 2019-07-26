@@ -1,3 +1,11 @@
+# This project is closed
+
+we have been combined this project with [project spectra](https://github.com/kouui/spectra)
+
+---
+---
+---
+
 # AtomicQuery
 This is an experimental package for the sake of hashing atomic data by (configuration, term, J) level information instead of (idxI, idxJ), so that an Atom object is able to be created by given the information of necessary levels without editing the data file.
 
@@ -179,7 +187,3 @@ for proton impact collision excitation
 - [chianti database](http://www.chiantidatabase.org/chianti_download.html) provides fitting parameters of proton excitation Rate Coefficient and electron excitation Effective Collisional Strength. **All of the proton transitions are forbidden transitions taking place between levels within the same configuration (fine structure)**.
 
 - [Copeland et al. 1997](./ref/ECS/Copeland_et_al_1997.pdf) listed a table of references for **Be-like to Cl-like ions for elements from C to Ni**. Also **fine_structure excitation only**.
-
-## TODO
-
-- [ ] Calculate the fitting parameters for collisional excitation/ionization. Because computation using fitting formula is always faster than interpolation, and it is also easier to optmize, e.x. `Numba` and so on.
